@@ -28,12 +28,12 @@ class ActivityHistoryAdapter : RecyclerView.Adapter<ActivityHistoryAdapter.ViewH
         if (item.transactionType == "Deposit") {
             holder.transactionTypeImage.setImageResource(R.drawable.add_button_orange)
             holder.transactionAmount.setText("${numFormatter.format(item.transactionAmount)}")
-            holder.transactionTypeText.setText("Deposit")
+            holder.transactionTypeText.setText(R.string.deposit)
         }
         else {
             holder.transactionTypeImage.setImageResource(R.drawable.minus_button_blue)
             holder.transactionAmount.setText("-${numFormatter.format(item.transactionAmount)}")
-            holder.transactionTypeText.setText("Withdraw")
+            holder.transactionTypeText.setText(R.string.withdraw)
         }
     }
 

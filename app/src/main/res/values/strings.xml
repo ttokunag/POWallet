@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">POWallet</string>
     <string name="back_button">Back</string>
-    <string name="history">History</string>
     <string name="about">About</string>
     <string name="about_text">This is the about page</string>
     <string name="doller_amount">$%d</string>
@@ -21,7 +20,10 @@
     <string name="user_name_not_found">The user name doesn\'t exist</string>
     <string name="change_password">Change Password</string>
     <string name="create_account">Create a new account</string>
+    <string name="deposit">Deposit</string>
+    <string name="withdraw">Withdraw</string>
     <string name="create">Create</string>
     <string name="amount">Amount</string>
     <string name="purpose">Purpose</string>
+    <string name="history">History</string>
 </resources>

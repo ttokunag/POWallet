@@ -17,7 +17,6 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:id="@+id/application_title_text"
-                app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginEnd="64dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +24,9 @@
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:layout_marginStart="64dp"
-                android:layout_marginTop="128dp"/>
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/application_image"
+                app:layout_constraintVertical_bias="0.95"/>
 
         <ImageView
                 android:layout_width="64dp"
@@ -33,9 +34,9 @@
                 android:id="@+id/application_image" app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/application_title_text"
                 android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/password_incorrect_text"
-                app:layout_constraintVertical_bias="0.20"/>
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.9"/>
 
         <TextView
                 android:text="@string/password_incorrect_text"
@@ -45,21 +46,18 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/application_title_text"
                 android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/login_layout"
-                app:layout_constraintVertical_bias="0.95"
                 style="@style/warning" android:visibility="invisible"/>
 
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/application_title_text" android:id="@+id/login_layout"
+                android:id="@+id/login_layout"
                 android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.36"
                 app:layout_constraintStart_toStartOf="@+id/application_title_text"
-                app:layout_constraintEnd_toEndOf="@+id/application_title_text">
+                app:layout_constraintEnd_toEndOf="@+id/application_title_text" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent">
             <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -91,7 +89,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/login_layout"
                 app:layout_constraintEnd_toEndOf="@+id/login_layout"
                 app:layout_constraintStart_toStartOf="@+id/login_layout" android:layout_marginTop="8dp"
-        />
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"/>
 
         <TextView
                 android:text="@string/forget_password"
@@ -104,8 +103,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/login_button"
-                android:visibility="visible" android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.100000024"/>
+                android:visibility="visible"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.10"/>
         <TextView
                 android:text="@string/create_account"
                 android:layout_width="wrap_content"
@@ -116,7 +116,7 @@
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
                 android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/forget_password_text"
-                app:layout_constraintVertical_bias="0.10"/>
+                app:layout_constraintVertical_bias="0.0"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -36,13 +36,13 @@ class FinanceTrackerFragment : Fragment() {
 
         // set currentBalance LiveData observer
         viewModel.currentBalance.observe(this, Observer {
-            binding.depositTextview.setText(viewModel.currentBalanceString())
+            binding.depositTextview.text = viewModel.currentBalanceString()
         })
         // set whichButton LiveData observer
         viewModel.whichButtonClicked.observe(this, Observer { buttonClicked ->
             when (buttonClicked) {
-                0 -> binding.tapPrompt.setText("Deposit")
-                1 -> binding.tapPrompt.setText("Withdraw")
+                0 -> binding.tapPrompt.setText(R.string.deposit)
+                1 -> binding.tapPrompt.setText(R.string.withdraw)
             }
             resetTypeface()
             binding.doneImage.visibility = View.VISIBLE
@@ -79,6 +79,8 @@ class FinanceTrackerFragment : Fragment() {
         super.onResume()
         hideKeyboard(binding.financeTrackerConstraintView)
         hideInputViews()
+        resetTypeface()
+        binding.tapPrompt.setText(R.string.tap_prompt_text)
     }
 
 
@@ -103,16 +105,14 @@ class FinanceTrackerFragment : Fragment() {
 
             // deals with an invalid amount
             if (whichButton == 1 && viewModel.isEnteredAmountInvalid()) {
-                binding.tapPrompt.setText("Amount exceeds the balance")
-                binding.tapPrompt.setTypeface(Typeface.DEFAULT_BOLD)
+                binding.tapPrompt.text = "Amount exceeds the balance"
+                binding.tapPrompt.typeface = Typeface.DEFAULT_BOLD
                 binding.tapPrompt.setTextColor(Color.parseColor("#E32636"))
 
                 binding.transactionAmountEditText.setText("")
                 binding.purposeEdittext.setText("")
             }
             else {
-                binding.transactionAmountEditText.setText("")
-                binding.purposeEdittext.setText("")
                 hideInputViews()
                 resetTypeface()
                 binding.tapPrompt.setText(R.string.tap_prompt_text)
@@ -163,6 +163,8 @@ class FinanceTrackerFragment : Fragment() {
         binding.purposeEdittext.visibility = View.INVISIBLE
         binding.doneImage.visibility = View.INVISIBLE
         binding.transactionAmountEditText.visibility = View.INVISIBLE
+        binding.purposeEdittext.setText("")
+        binding.transactionAmountEditText.setText("")
     }
 
 }
