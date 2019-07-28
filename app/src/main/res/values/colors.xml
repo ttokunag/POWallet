@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#3b5998</color>
+    <color name="colorAccent">#008577</color>
+    <color name="dark_blue">#012e52</color>
+    <color name="light_gray">#A9A9A9</color>
+    <color name="warning">#E32636</color>
+    <color name="white">#FFFFFF</color>
+    <color name="FB_blue">#3b5998</color>
+</resources>

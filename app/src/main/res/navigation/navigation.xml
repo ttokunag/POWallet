@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation"
+            app:startDestination="@+id/loginFragment">
+
+    <fragment
+            android:id="@+id/financeTrackerFragment"
+            android:name="com.tapp.safepof.FinanceTrackerFragment"
+            android:label="Current Balance"
+            tools:layout="@layout/finance_tracker">
+        <action
+                android:id="@+id/action_financeTrackerFragment_to_activityHistoryFragment"
+                app:destination="@id/activityHistoryFragment" app:enterAnim="@anim/nav_default_pop_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popUpTo="@+id/financeTrackerFragment" app:popUpToInclusive="false"/>
+        <argument android:name="userName" app:argType="string"/>
+        <action android:id="@+id/action_financeTrackerFragment_to_loginFragment" app:destination="@id/loginFragment"
+                app:popUpTo="@+id/loginFragment"/>
+    </fragment>
+
+    <fragment
+            android:name="com.tapp.safepof.ActivityHistoryFragment"
+            android:label="Activity History"
+            android:id="@+id/activityHistoryFragment"
+            tools:layout="@layout/activity_history">
+        <action
+                android:id="@+id/action_activityHistoryFragment_to_financeTrackerFragment"
+                app:destination="@id/financeTrackerFragment"
+                app:enterAnim="@anim/nav_default_enter_anim" app:exitAnim="@anim/nav_default_exit_anim"
+                app:popUpTo="@+id/activityHistoryFragment" app:popUpToInclusive="true"/>
+        <argument android:name="userName" app:argType="string"/>
+    </fragment>
+    <fragment android:id="@+id/loginFragment"
+              android:name="com.tapp.safepof.LoginFragment"
+              android:label="LoginFragment"
+              tools:layout="@layout/login">
+        <action
+                android:id="@+id/action_loginFragment_to_financeTrackerFragment"
+                app:destination="@id/financeTrackerFragment" app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim" app:popUpTo="@+id/loginFragment"
+                app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_loginFragment_to_forgetPasswordFragment"
+                app:destination="@id/forgetPasswordFragment" app:enterAnim="@anim/nav_default_pop_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"/>
+        <action android:id="@+id/action_loginFragment_to_createAccountFragment"
+                app:destination="@id/createAccountFragment" app:enterAnim="@anim/nav_default_pop_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+    <fragment android:id="@+id/forgetPasswordFragment"
+              android:name="com.tapp.safepof.ForgetPasswordFragment"
+              android:label="ForgetPasswordFragment"
+              tools:layout="@layout/forget_password">
+        <action android:id="@+id/action_forgetPasswordFragment_to_loginFragment"
+                app:destination="@id/loginFragment" app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+    <fragment android:id="@+id/createAccountFragment"
+              android:name="com.tapp.safepof.CreateAccountFragment"
+              android:label="CreateAccountFragment"
+              tools:layout="@layout/create_account">
+        <action android:id="@+id/action_createAccountFragment_to_loginFragment" app:destination="@id/loginFragment"
+                app:enterAnim="@anim/nav_default_enter_anim" app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+</navigation>

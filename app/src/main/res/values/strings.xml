@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">POWallet</string>
+    <string name="back_button">Back</string>
+    <string name="history">History</string>
+    <string name="about">About</string>
+    <string name="about_text">This is the about page</string>
+    <string name="doller_amount">$%d</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tap_prompt_text">Tap the button below</string>
+    <string name="done">Done</string>
+    <string name="log_text">See the activity log</string>
+    <string name="application_title">PageOne Wallet</string>
+    <string name="either_username_or_password_incorrect">Either name or password is incorrect</string>
+    <string name="password_incorrect">Password is incorrect</string>
+    <string name="password_incorrect_text">Password is incorrect</string>
+    <string name="check_internet">Check the Internet connection</string>
+    <string name="forget_password">Forget password? Click me!</string>
+    <string name="login">Log In</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="password_not_match">The passwords don\'t match</string>
+    <string name="user_name_not_found">The user name doesn\'t exist</string>
+    <string name="change_password">Change Password</string>
+    <string name="create_account">Create a new account</string>
+    <string name="create">Create</string>
+    <string name="amount">Amount</string>
+    <string name="purpose">Purpose</string>
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "780827685561",
+    "firebase_url": "https://safepof.firebaseio.com",
+    "project_id": "safepof",
+    "storage_bucket": "safepof.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780827685561:android:080320bf3323154c",
+        "android_client_info": {
+          "package_name": "com.tapp.safepof"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780827685561-6uhrc3reoild53a95u87eumm7lrtoipj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrz5K-BLHI3L1OQIydU_zdZ1Bko3RnlOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780827685561-6uhrc3reoild53a95u87eumm7lrtoipj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
